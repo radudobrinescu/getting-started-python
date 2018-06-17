@@ -38,15 +38,13 @@ inject-secret:
     box:
         id: alpine
         cmd: /bin/sh
-    steps:
-    
+    steps:    
     - kubectl:
         name: delete secret
         server: $KUBERNETES_MASTER
         token: $KUBERNETES_TOKEN
         insecure-skip-tls-verify: true
         command: delete secret wercker; echo delete registry secret
-        
     - kubectl:
         name: create secret
         server: $KUBERNETES_MASTER
