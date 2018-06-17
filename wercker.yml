@@ -1,5 +1,6 @@
 box:
-  id: python:2.7-slim
+  #id: python:2.7-slim
+  id: jazzdd/alpine-flask:latest
   ports:
     - "5000"
 
@@ -16,8 +17,6 @@ build:
   steps:
     # A step that executes `pip install` command
     - pip-install
-    - internal/shell:
-        cmd: pip install flask
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
     - script:
