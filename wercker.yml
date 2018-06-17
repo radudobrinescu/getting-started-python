@@ -30,6 +30,6 @@ push-release:
     - internal/docker-push:
        username: $OCIRUSERNAME
        password: $OCIRPASSWORD
-       tag: latest
+       tag: test
        repository: fra.ocir.io/ptsbm02/getting-started-python
        registry: https://fra.ocir.io/v2
