@@ -23,7 +23,9 @@ build:
         name: python unit test
         code: |
           python app_test.py
- docker-build:
+          
+#Build docker container
+docker-build:
   steps:
     - internal/docker-build:
       dockerfile: Dockerfile 
