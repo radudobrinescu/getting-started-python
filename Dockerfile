@@ -1,11 +1,12 @@
 FROM python:2.7-slim
 
 # Install app dependencies
-RUN pip install Flask
+RUN apt-get update -y
+RUN apt-get install -y python-pip python-dev flask 
 
-# Bundle app source
-COPY app.py /src/app.py
-COPY app_test.py /src/app_test.py
+COPY . /app
+WORKDIR /app
+RUN pip install -r requirements.txt
 
-EXPOSE  5000
-CMD ["python", "/src/app.py", "-p 5000"]
+ENTRYPOINT ["python"]
+CMD ["app.py"]
