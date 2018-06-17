@@ -36,6 +36,7 @@ metadata:
 spec:
   ports:
   - port: 5000
+    targetport: 80
   selector:
     app: hello-world
   type: LoadBalancer
