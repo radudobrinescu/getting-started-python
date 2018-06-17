@@ -1,4 +1,4 @@
-FROM alpine:3.1
+FROM python:2.7-slim
 
 # Update
 RUN apk add --update python py-pip
