@@ -50,8 +50,7 @@ inject-secret:
         server: $KUBERNETES_MASTER
         token: $KUBERNETES_TOKEN
         insecure-skip-tls-verify: true
-        command: create secret docker-registry fraocir --docker-server=$DOCKER_REGISTRY --docker-username=$OCIRUSERNAME --docker-password=$OCIRPASSWORD --docker-email=$DOCKER_EMAIL; echo create registry secret
-        
+        command: create secret docker-registry ptsbm02 --docker-server=$DOCKER_REGISTRY --docker-username=$OCIRUSERNAME --docker-password=$OCIRPASSWORD --docker-email=$DOCKER_EMAIL; echo create registry secret       
 deploy-to-cluster:
     box:
         id: alpine
