@@ -31,5 +31,5 @@ push-release:
        username: $USERNAME
        password: $PASSWORD
        tag: pythonapp
-       repository: $USERNAME/werckerrepo
+       repository: ptsbm02/werckerrepo
        registry: https://fra.ocir.io/v2/
