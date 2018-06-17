@@ -23,3 +23,12 @@ build:
         name: python unit test
         code: |
           python app_test.py
+ 
+ #Push release definition
+ push-release
+ - internal/docker-push:
+      username: $OCIR_USERNAME
+      password: $OCIR_PASSWORD
+      tag: firstdemo
+      repository: ptsbm02/devopsdemo
+      registry: https://fra.ocir.io/v2/
