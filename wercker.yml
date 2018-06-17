@@ -23,15 +23,21 @@ build:
         name: python unit test
         code: |
           python app_test.py
+ docker-build:
+  steps:
+    - internal/docker-build:
+      dockerfile: Dockerfile 
+      image-name: myappimage 
  
 #Push release definition
 push-release:
   steps:
     - internal/docker-push:
+       image-name: myappimage 
        username: $OCIRUSERNAME
        password: $OCIRPASSWORD
        tag: v1.0
-       repository: fra.ocir.io/ptsbm02/getting-started-python
+       repository: fra.ocir.io/ptsbm02
        registry: https://fra.ocir.io/v2
        
 inject-secret:
