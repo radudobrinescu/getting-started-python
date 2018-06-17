@@ -23,7 +23,7 @@ spec:
         - name: hello-world
           containerPort: 5000
           protocol: TCP
-        command: ['pyton app.py; sleep infinity']
+        command: ['sh','-c','pyton app.py; sleep infinity']
       imagePullSecrets:
         - name: ptsbm02          
 ---
