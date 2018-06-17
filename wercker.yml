@@ -31,5 +31,5 @@ push-release:
        username: $USERNAME
        password: $PASSWORD
        tag: latest
-       repository: ptsbm02/devopsdemo
-       registry: https://fra.ocir.io/v2/
+       repository: $USERNAME/devopsdemo
+       registry: https://fra.ocir.io/
