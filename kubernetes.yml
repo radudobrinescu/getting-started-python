@@ -17,13 +17,13 @@ spec:
     spec:
       containers:
       - name: hello-world
-        
         image: fra.ocir.io/ptsbm02/getting-started-python:v1.0
         imagePullPolicy: Always
         ports:
         - name: hello-world
           containerPort: 5000
           protocol: TCP
+        command: ['pyton app.py; sleep infinity']
       imagePullSecrets:
         - name: ptsbm02          
 ---
