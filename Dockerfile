@@ -1,8 +1,5 @@
 FROM python:2.7-slim
 
-# Update
-RUN apk add --update python py-pip
-
 # Install app dependencies
 RUN pip install Flask
 
