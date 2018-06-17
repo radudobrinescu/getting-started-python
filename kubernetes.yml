@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: hello-world
   labels:
-#    commit: ${WERCKER_GIT_COMMIT}
+
 spec:
   replicas: 1
   selector:
@@ -13,11 +13,11 @@ spec:
     metadata:
       labels:
         app: hello-world
- #       commit: ${WERCKER_GIT_COMMIT}
+ 
     spec:
       containers:
       - name: hello-world
-        #image: ${DOCKER_REPO}:${WERCKER_GIT_BRANCH}-${WERCKER_GIT_COMMIT}
+        
         image: fra.ocir.io/ptsbm02/getting-started-python:v1.0
         imagePullPolicy: Always
         ports:
@@ -33,12 +33,11 @@ metadata:
   name: hello-world
   labels:
     app: hello-world
-#    commit: ${WERCKER_GIT_COMMIT}
+
 spec:
   ports:
   - port: 30000
     targetPort: 5000
   selector:
     app: hello-world
-#    commit: ${WERCKER_GIT_COMMIT}
 type: LoadBalancer
