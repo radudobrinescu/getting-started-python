@@ -28,8 +28,8 @@ build:
 push-release:
   steps:
     - internal/docker-push:
-       username: $USERNAME
-       password: $PASSWORD
-       tag: pythonapp
-       repository: $USERNAME/ptsbm02/werckerrepo
+       username: $OCIRUSERNAME
+       password: $OCIRPASSWORD
+       tag: latest
+       repository: fra.ocir.io/ptsbm02/pythonapp
        registry: https://fra.ocir.io/v2/
