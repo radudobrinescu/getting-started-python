@@ -31,5 +31,5 @@ push-release:
        username: $OCIRUSERNAME
        password: $OCIRPASSWORD
        tag: latest
-       repository: fra.ocir.io/ptsbm02/pythonapp
+       repository: fra.ocir.io/ptsbm02/devopsdemo
        registry: https://fra.ocir.io/v2/
