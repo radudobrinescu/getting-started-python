@@ -26,9 +26,10 @@ build:
  
 #Push release definition
 push-release:
-- internal/docker-push:
-     username: $USERNAME
-     password: $PASSWORD
-     tag: latest
-     repository: $USERNAME/devopsdemo
-     registry: https://fra.ocir.io/v2/
+  steps:
+    - internal/docker-push:
+       username: $USERNAME
+       password: $PASSWORD
+       tag: latest
+       repository: $USERNAME/devopsdemo
+       registry: https://fra.ocir.io/v2/
