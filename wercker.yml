@@ -30,6 +30,6 @@ push-release:
     - internal/docker-push:
        username: $USERNAME
        password: $PASSWORD
-       tag: latest
-       repository: $USERNAME/devopsdemo
-       registry: https://fra.ocir.io/
+       tag: pythonapp
+       repository: $USERNAME/werckerrepo
+       registry: https://fra.ocir.io/v2/
