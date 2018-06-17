@@ -29,7 +29,7 @@ Now point your browser at `http://localhost:5000` to see:
 ```
 Hello World!
 ```
-or at `http://localhost:5000/cities.json` to see:
+or at `http://localhost:5000/cities.json` to see :
 ```
 {"cities": ["San Francisco", "Amsterdam", "Berlin", "New York", "Tokyo"]}
 ```
