@@ -41,7 +41,7 @@ push-release:
        tag: v1.0
        repository: fra.ocir.io/ptsbm02/getting-started-python
        registry: https://fra.ocir.io/v2
-       entrypoint: ["python", "app.py"]
+       #entrypoint: ["python", "app.py"]
        port: 5000/tcp
        
 inject-secret:
