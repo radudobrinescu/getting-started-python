@@ -35,11 +35,11 @@ docker-build:
 push-release:
   steps:
     - internal/docker-push:
-       image-name: myappimage
+       #image-name: myappimage
        username: $OCIRUSERNAME
        password: $OCIRPASSWORD
        tag: v1.0
-       repository: fra.ocir.io/ptsbm02
+       repository: fra.ocir.io/ptsbm02/getting-started-python
        registry: https://fra.ocir.io/v2
        
 inject-secret:
