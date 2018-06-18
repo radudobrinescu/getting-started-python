@@ -33,17 +33,17 @@ docker-build:
   steps:
     - internal/docker-build:
       dockerfile: Dockerfile 
-      image-name: myappimage 
+      image-name: getting-started-python
  
 #Push release definition
 push-release:
   steps:
     - internal/docker-push:
-       #image-name: myappimage
+       image-name: getting-started-python
        username: $OCIRUSERNAME
        password: $OCIRPASSWORD
        tag: v1.0
-       repository: fra.ocir.io/ptsbm02/getting-started-python
+       repository: fra.ocir.io/ptsbm02/
        registry: https://fra.ocir.io/v2
        #entrypoint: ["python", "app.py"]
        port: 5000/tcp
