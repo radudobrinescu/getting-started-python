@@ -46,7 +46,7 @@ push-release:
        
 inject-secret:
     box:
-        id: python:2.7-slim
+        id: alpine
         cmd: /bin/sh
     steps:    
     - kubectl:
@@ -63,11 +63,11 @@ inject-secret:
         command: create secret docker-registry ptsbm02 --docker-server=$DOCKER_REGISTRY --docker-username=$OCIRUSERNAME --docker-password=$SECRET_TOKEN --docker-email=$DOCKER_EMAIL; echo create registry secret       
 deploy-to-cluster:
     box:
-        id: python:2.7-slim
-        #cmd: /bin/sh
+        id: alpine
+        cmd: /bin/sh
     steps:
 
-    #- bash-template
+    - bash-template
 
     - script:
         name: "Visualise Kubernetes config"
