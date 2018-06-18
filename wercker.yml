@@ -22,7 +22,6 @@ build:
     - script:
         name: python unit test
         code: |
-          pip install flask
           python app_test.py
         name: echo python information
         code: |
