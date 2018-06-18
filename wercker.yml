@@ -39,7 +39,7 @@ docker-build:
 push-release:
   steps:
     - internal/docker-push:
-       image-name: myimageapp
+       #image-name: myimageapp
        username: $OCIRUSERNAME
        password: $OCIRPASSWORD
        tag: v1.0
