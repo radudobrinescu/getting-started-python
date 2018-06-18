@@ -23,7 +23,7 @@ build:
         name: python unit test
         code: |
           python app_test.py
-          
+    - internal/store-container    
 #Build docker container
 docker-build:
   steps:
