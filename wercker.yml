@@ -46,8 +46,9 @@ push-release:
        repository: fra.ocir.io/ptsbm02/getting-started-python
        registry: https://fra.ocir.io/v2
        working-dir: /pipeline/source
-       port: 5000/tcp
-       cmd: ['python app.py']
+       ports: "5000"
+       cmd: 'python app.py'
+       
 inject-secret:
     box:
         id: alpine
