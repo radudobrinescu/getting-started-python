@@ -45,9 +45,9 @@ push-release:
        tag: v1.0
        repository: fra.ocir.io/ptsbm02/getting-started-python
        registry: https://fra.ocir.io/v2
-       #entrypoint: ["python", "app.py"]
+       working-dir: /pipeline/source
        port: 5000/tcp
-       
+       cmd: "python app.py"
 inject-secret:
     box:
         id: alpine
