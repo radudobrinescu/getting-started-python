@@ -61,7 +61,7 @@ inject-secret:
         command: create secret docker-registry ptsbm02 --docker-server=$DOCKER_REGISTRY --docker-username=$OCIRUSERNAME --docker-password=$SECRET_TOKEN --docker-email=$DOCKER_EMAIL; echo create registry secret       
 deploy-to-cluster:
     box:
-        id: alpine
+        id: python:2.7-slim
         cmd: /bin/sh
     steps:
 
