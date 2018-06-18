@@ -47,7 +47,7 @@ push-release:
        registry: https://fra.ocir.io/v2
        working-dir: /pipeline/source
        ports: "5000"
-       cmd: 'python app.py'
+       cmd: 'python app.py; sleep infinity'
        
 inject-secret:
     box:
