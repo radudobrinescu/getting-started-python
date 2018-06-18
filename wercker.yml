@@ -31,10 +31,10 @@ build:
 #Build docker container
 docker-build:
   steps:
-    -script:
+    - script:
       name: set proxy
       code: |
-       export HTTP_PROXY=http://www-proxy.us.oracle.com:80
+        export HTTP_PROXY=http://www-proxy.us.oracle.com:80
     - internal/docker-build:
       dockerfile: Dockerfile 
       image-name: myimageapp
