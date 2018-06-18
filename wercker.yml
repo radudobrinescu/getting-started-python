@@ -62,10 +62,10 @@ inject-secret:
 deploy-to-cluster:
     box:
         id: python:2.7-slim
-        cmd: /bin/sh
+        #cmd: /bin/sh
     steps:
 
-    - bash-template
+    #- bash-template
 
     - script:
         name: "Visualise Kubernetes config"
