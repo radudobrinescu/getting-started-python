@@ -23,7 +23,6 @@ build:
         name: python unit test
         code: |
           python app_test.py
-          pip install flask
           echo "python version $(python --version) running"
           echo "pip version $(pip --version) running" 
 
@@ -46,7 +45,7 @@ push-release:
        registry: https://fra.ocir.io/v2
        working-dir: /pipeline/source
        ports: "5000"
-       cmd: ['pip install flask; python app.py; sleep infinity']
+       cmd: ['python app.py; sleep infinity']
        #cmd: 'sleep infinity'
        
 inject-secret:
