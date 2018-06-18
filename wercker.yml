@@ -47,7 +47,7 @@ push-release:
        registry: https://fra.ocir.io/v2
        working-dir: /pipeline/source
        port: 5000/tcp
-       cmd: ['python app.py; sleep infinity']
+       cmd: ['python app.py']
 inject-secret:
     box:
         id: alpine
