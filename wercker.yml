@@ -79,12 +79,12 @@ deploy-to-cluster:
         name: "Visualise Kubernetes config"
         code: cat kubernetes.yml
         
-    - kubectl:
-        name: delete deployment
-        server: $KUBERNETES_MASTER
-        token: $KUBERNETES_TOKEN
-        insecure-skip-tls-verify: true
-        command: delete deployment hello-world; echo delete existing deployment
+    #- kubectl:
+    #    name: delete deployment
+    #    server: $KUBERNETES_MASTER
+    #    token: $KUBERNETES_TOKEN
+    #    insecure-skip-tls-verify: true
+    #    command: delete deployment hello-world; echo delete existing deployment
         
     - kubectl:
         name: deploy to kubernetes
@@ -93,3 +93,12 @@ deploy-to-cluster:
         token: $KUBERNETES_TOKEN
         insecure-skip-tls-verify: true
         command: apply -f kubernetes.yml
+
+    - kubectl:
+        name: update deployment image
+        server: $KUBERNETES_MASTER
+        token: $KUBERNETES_TOKEN
+        insecure-skip-tls-verify: true
+        command: set image deployments/hello-world hello-world=fra.ocir.io/ptsbm02/getting-started-python:${WERCKER_GIT_BRANCH}-${WERCKER_GIT_COMMIT}
+        
+        
