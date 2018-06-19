@@ -41,7 +41,8 @@ push-release:
        #image-name: myimageapp
        username: $OCIRUSERNAME
        password: $OCIRPASSWORD
-       tag: v1.0
+       #tag: v1.0
+       tag: ${WERCKER_GIT_BRANCH}-${WERCKER_GIT_COMMIT}
        repository: fra.ocir.io/ptsbm02/getting-started-python
        registry: https://fra.ocir.io/v2
        working-dir: /pipeline/source
