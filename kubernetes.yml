@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: fra.ocir.io/ptsbm02/getting-started-python:v1.0
+        image: fra.ocir.io/ptsbm02/getting-started-python:${WERCKER_GIT_BRANCH}-${WERCKER_GIT_COMMIT}
         imagePullPolicy: Always
         ports:
         - name: hello-world
