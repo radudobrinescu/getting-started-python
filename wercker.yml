@@ -78,29 +78,31 @@ deploy-to-cluster:
     - script:
         name: "Visualise Kubernetes config"
         code: cat kubernetes.yml
-        
-    - kubectl:
-        name: delete deployment
-        server: $KUBERNETES_MASTER
-        token: $KUBERNETES_TOKEN
-        insecure-skip-tls-verify: true
-        command: delete deployment hello-world; echo delete existing deployment
-         
-    - kubectl:
-        name: deploy to kubernetes
-        server: $KUBERNETES_MASTER
-        #username: $KUBERNETES_USERNAME
-        token: $KUBERNETES_TOKEN
-        insecure-skip-tls-verify: true
-        command: apply -f kubernetes.yml
-
+    
+    #Keep delete and deploy for initial deployment
     #- kubectl:
-    #    name: rolling-update 
+    #    name: delete deployment
     #    server: $KUBERNETES_MASTER
     #    token: $KUBERNETES_TOKEN
     #    insecure-skip-tls-verify: true
-    #    command: set image deployments/hello-world hello-world=fra.ocir.io/ptsbm02/getting-started-python:${WERCKER_GIT_BRANCH}-${WERCKER_GIT_COMMIT} 
-    #    command: rolling-update hello-world
-    #    image: fra.ocir.io/ptsbm02/getting-started-python:${WERCKER_GIT_BRANCH}-${WERCKER_GIT_COMMIT}
+    #    command: delete deployment hello-world; echo delete existing deployment
+         
+    #- kubectl:
+    #    name: deploy to kubernetes
+    #    server: $KUBERNETES_MASTER
+    #    #username: $KUBERNETES_USERNAME
+    #    token: $KUBERNETES_TOKEN
+    #    insecure-skip-tls-verify: true
+    #    command: apply -f kubernetes.yml
+
+    #Keep just update section for rolling updates
+    - kubectl:
+        name: rolling-update 
+        server: $KUBERNETES_MASTER
+        token: $KUBERNETES_TOKEN
+        insecure-skip-tls-verify: true
+        command: set image deployments/hello-world hello-world=fra.ocir.io/ptsbm02/getting-started-python:${WERCKER_GIT_BRANCH}-${WERCKER_GIT_COMMIT} 
+        command: rolling-update hello-world
+        image: fra.ocir.io/ptsbm02/getting-started-python:${WERCKER_GIT_BRANCH}-${WERCKER_GIT_COMMIT}
         
         
