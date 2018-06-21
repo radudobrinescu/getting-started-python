@@ -102,7 +102,7 @@ deploy-to-cluster:
         token: $KUBERNETES_TOKEN
         insecure-skip-tls-verify: true
         command: set image deployments/hello-world hello-world=fra.ocir.io/ptsbm02/getting-started-python:${WERCKER_GIT_BRANCH}-${WERCKER_GIT_COMMIT} 
-        command: rolling-update hello-world
-        image: fra.ocir.io/ptsbm02/getting-started-python:${WERCKER_GIT_BRANCH}-${WERCKER_GIT_COMMIT}
+        #command: rolling-update hello-world
+        #image: fra.ocir.io/ptsbm02/getting-started-python:${WERCKER_GIT_BRANCH}-${WERCKER_GIT_COMMIT}
         
         
