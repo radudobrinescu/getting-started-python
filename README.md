@@ -1,6 +1,6 @@
 # getting-started-python
 
-[![Wercker status](https://app.wercker.com/status/b312ecb5c6fdd7c6eb871455a5b8964e/s)](https://app.wercker.com/project/bykey/b312ecb5c6fdd7c6eb871455a5b8964e)
+[![wercker status](https://app.wercker.com/status/69190ac33e9f2bd2337361a676e67dfa/m/master "wercker status")](https://app.wercker.com/project/byKey/69190ac33e9f2bd2337361a676e67dfa)
 
 This is a sample Python application, using the Flask microframework, for use with Wercker.  This application uses the `2.7:slim` container obtained from the [Docker Hub](https://hub.docker.com/_/python/)
 
